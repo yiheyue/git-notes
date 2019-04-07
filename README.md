@@ -34,3 +34,6 @@ One of the most popular VCS tools was a system called RCS, which is still distri
 
 - Git has integrity
 
+- Git generally only adds data
+
+- The three states
