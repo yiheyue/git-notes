@@ -1,5 +1,13 @@
 # Git Notes
 
+Notes for [Pro Git](https://git-scm.com/book/en/v2).
+
+## Index
+
+- [About Git](./README.md)
+
+- [Git Basics](./docs/doc01-git-basic.md)
+
 ## VCS
 
 - VCS - Version Control System
