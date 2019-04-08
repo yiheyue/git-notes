@@ -86,3 +86,36 @@ Git configuration variables can be stored in three different places:
     # Passing --local option to read/write this file
     git config --local
     ```
+
+> View all of your settings and where they are coming from using: `git config --list --show-origin`
+
+### Your Identity
+
+Set your user name and email address:
+
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+### Your Editor
+
+Set your text editor
+
+```bash
+git config --global core.editor emacs
+```
+
+### Checking Your Settings
+
+Check the settings
+
+```bash
+git config --list
+```
+
+Check the specific key's value
+
+```bash
+git config user.name
+```
