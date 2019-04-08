@@ -119,3 +119,29 @@ Check the specific key's value
 ```bash
 git config user.name
 ```
+
+## Getting Help
+
+1. Method 1
+
+    ```bash
+    # git help <verb>
+    git help config
+    ```
+
+2. Method 2
+
+    ```bash
+    # man git-<verb>
+    man git-config
+    ```
+
+3. Method 3
+
+    ```bash
+    # git <verb> -h
+    git config -h
+
+    # or git <verb> --help
+    git config --help
+    ```
