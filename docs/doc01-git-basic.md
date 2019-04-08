@@ -171,3 +171,68 @@ git rm file-a
 
 git add file-a-mv
 ```
+
+## Viewing the Commit History
+
+Use `git log` command:
+
+```bash
+git log
+```
+
+Show difference between the last two entries:
+
+```bash
+git log -p -2
+
+# or
+git log --patch -2
+```
+
+Show abbreviated stats for each commit:
+
+```bash
+git log --stat
+```
+
+Change the log output:
+
+```bash
+# Oneline
+git log --pretty=oneline
+
+# Short
+git log --pretty=short
+
+# Full
+git log --pretty=full
+
+# Fuller
+git log --pretty=fuller
+```
+
+Specify your own log output:
+
+```bash
+git log --pretty=format:"%h - %an, %ar : %s"
+```
+
+Useful options for `git log --pretty=format`
+
+| Option | Description of Output     |
+| ------ | ------------------------- |
+| `%H`   | Commit hash               |
+| `%h`   | Abbreviated commit hash   |
+| `%T`   | Tree hash                 |
+| `%t`   | Abbreviated tree hash     |
+| `%P`   | Parent hashes             |
+| `%p`   | Abbreviated parent hashes |
+| `%an`  | Author name               |
+| `%ae`  | Author email              |
+| `%ad`  | Author date               |
+| `%ar`  | Author date, relative     |
+| `%cn`  | Committer name            |
+| `%ce`  | Committer email           |
+| `%cd`  | Committer date            |
+| `%cr`  | Committer date, relative  |
+| `%s`   | Subject                   |
