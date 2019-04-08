@@ -34,6 +34,24 @@ One of the most popular VCS tools was a system called RCS, which is still distri
 
 - Git has integrity
 
+  The mechanism that Git uses for this checksumming is called a SHA-1 hash. It is a 40-character string.
+
+  ```
+  24b9da6552252987aa493b52f8696cd6d3b00373
+  ```
+
 - Git generally only adds data
 
 - The three states
+
+  - **committed**
+
+    Committed means that the data is safely stored in your local database.
+
+  - **modified**
+
+    Modified means that you have changed the file but have not committed it to your database yet.
+
+  - **staged**
+
+    Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
