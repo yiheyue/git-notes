@@ -265,3 +265,29 @@ Options to limit the output of `git log`
 | `--committer`         | Only show commits in which the committer entry matches the specified string |
 | `--grep`              | Only show commits with a commit message containing the string               |
 | `-S`                  | Only show commits adding or removing code matching the string               |
+
+## Undoing Things
+
+Amend the last commit:
+
+```bash
+git commit --amend
+```
+
+### Unstaging a Staged File
+
+Use `git reset HEAD <file>` command:
+
+```bash
+# Unstage the README.md file
+git reset HEAD README.md
+```
+
+### Unmodifying a Modified File
+
+Use `git checkout -- <file>` command:
+
+```bash
+# Unmodifie the README.md file
+git checkout -- README.md
+```
