@@ -469,3 +469,45 @@ Example:
 ```bash
 git checkout v1.4
 ```
+
+## Git Aliases
+
+Abbreviation for Git command:
+
+```bash
+# Set co equals checkout command
+git config --global alias.co checkout
+
+# Set br equals branch command
+git config --global alias.br branch
+
+# Set ci equals commit command
+git config --global alias.ci commit
+
+# Set st equals status command
+git config --global alias.st status
+```
+
+User-defined command:
+
+```bash
+git config --global alias.unstage 'reset HEAD'
+
+# Then the following two commands equivalent
+git unstage README.md
+git reset HEAD README.md
+
+# ---
+
+git config --global alias.last 'log -1 HEAD'
+
+# Then the following two commands equivalent
+git last
+git log -1 HEAD
+```
+
+Run an external command:
+
+```bash
+git config --global alias.visual '!gitk'
+```
