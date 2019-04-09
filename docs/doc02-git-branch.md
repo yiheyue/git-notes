@@ -44,3 +44,46 @@ Creating a new branch and switching to it:
 # Create a new branch called newbranch and switch to it
 git checkout -b newbranch
 ```
+
+### Deleting an Existing Branch
+
+Use `git branch -d <branchname>` command to delete a branch:
+
+```bash
+git branch -d issue-53
+```
+
+### Merging Branches
+
+Use `git merge <branchname>` command to merge a branch
+
+```bash
+# Merge the issue-53 branch
+git merge issue-53
+```
+
+## Branch Management
+
+List your branches:
+
+```bash
+git branch
+```
+
+To see the last commit on each branch, run:
+
+```bash
+git branch -v
+```
+
+To see the merged branches, run:
+
+```bash
+git branch --merged
+```
+
+To see the unmerged branches, run:
+
+```bash
+git branch --no-merged
+```
