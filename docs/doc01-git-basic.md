@@ -291,3 +291,81 @@ Use `git checkout -- <file>` command:
 # Unmodifie the README.md file
 git checkout -- README.md
 ```
+
+## Workign with Remotes
+
+Remote repositories can be on your local machine. The word "remote" does not necessarily imply that the repository is somewhere else on the network or Internet, only that it is elsewhere.
+
+### Showing Your Remotes
+
+Use `git remote` command to show the short output:
+
+```bash
+git remote
+```
+
+Use `git remote -v` to show the verbose output:
+
+```bash
+# Show the URL
+git remote -v
+```
+
+### Adding Remote Repositories
+
+Use `git remote add <shortname> <url>` to add a new remote Git repository:
+
+```bash
+git remote add pb https://github.com/paulboone/ticgit
+
+# Then you can fetch all the information that Paul has but that you do not yet have
+git fetch pb
+```
+
+### Fetching and Pulling from Your Remotes
+
+Use `git fetch <remote>` to get data from your remote projects:
+
+```bash
+git fetch origin
+```
+
+> The `git fetch` command only downloads the data to your local repository, it does not automatically merge it with any of your work or modify what you are currently working on.
+
+Use `git pull` command to automatically fetch and then merge that remote branch into your current branch.
+
+### Pushing to Your Remotes
+
+Use `git push <remote> <branch>` to push your data:
+
+```bash
+# Push the master branch to origin remote
+git push origin master
+```
+
+### Inspecting a Remote
+
+Use `git remote show <remote>` to inspect a remote:
+
+```bash
+git remote show origin
+```
+
+### Renaming and Removing Remotes
+
+Use `git remote rename` command to change a remote's shortname:
+
+```bash
+# Rename pb to paul
+git remote rename pb paul
+```
+
+Use `git remote remove` or `git remote rm` command to remove a remote:
+
+```bash
+# Remove a remote called paul
+git remote remove paul
+
+# or
+git remote rm paul
+```
