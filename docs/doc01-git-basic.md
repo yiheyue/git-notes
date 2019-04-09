@@ -369,3 +369,103 @@ git remote remove paul
 # or
 git remote rm paul
 ```
+
+## Tagging
+
+Git has the ability to tag specific points in a repository's history as being important.
+
+### Listing Your Tags
+
+Simple output:
+
+```bash
+git tag
+```
+
+Use wildcards (requires `-l` or `--list` option):
+
+```bash
+git tag -l "v1.8.5*"
+```
+
+### Creating Tags
+
+Git supports two types of tags:
+
+- **lightweight**
+
+    A lightweight tag is very much like a branch that does not change, it is just a pointer to a specific commit.
+
+    ```bash
+    # Create a lightweight tag
+    git tag v1.0.23
+    ```
+
+- **annotated**
+
+    Annotated tags are stored as full objects in the Git database. They are checksummed and contain some information of tagging. It is generally recommended.
+
+    ```bash
+    # Create an annotated tag
+    git tag -a v1.0.0 -m "My version 1.0.0"
+    ```
+
+Show the tag data:
+
+```bash
+git show v1.0.0
+```
+
+### Tagging Later
+
+Just add the checksum after creating tags command:
+
+```bash
+git tag -a v0.1 -m "Version 0.1" ab032c1
+```
+
+### Sharing Tags
+
+By default, the `git push` command does not transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them.
+
+Push a single tag:
+
+```bash
+git push origin v1.4
+```
+
+Push all of tags:
+
+```bash
+git push --tags
+```
+
+### Deleting Tags
+
+Delete a tag on your local repository:
+
+```bash
+git tag -d v1.4
+```
+
+Delete a tag on remote server
+
+1. Use this format `git push <remote> :refs/tags/<tagname>`
+
+    ```bash
+    git push origin :refs/tags/v1.4
+    ```
+
+2. Use this format `git push <remote> --delete <tagname>`
+
+    ```bash
+    git push origin --delete v1.4
+    ```
+
+### Checking out Tags
+
+Example:
+
+```bash
+git checkout v1.4
+```
