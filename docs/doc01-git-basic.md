@@ -236,3 +236,32 @@ Useful options for `git log --pretty=format`
 | `%cd`  | Committer date            |
 | `%cr`  | Committer date, relative  |
 | `%s`   | Subject                   |
+
+### Limiting Log Output
+
+Use `-<n>` option:
+
+```bash
+# Show the last 3 commits
+git log -3
+```
+
+Use `--since` or `--until` option:
+
+```bash
+git log --since=2.weeks
+
+git log --since="2019-04-08"
+```
+
+Options to limit the output of `git log`
+
+| Option                | Description                                                                 |
+| --------------------- | --------------------------------------------------------------------------- |
+| `-<n>`                | Show only the last n commits                                                |
+| `--since`, `--after`  | Limit the commits to those made after the specified date                    |
+| `--until`, `--before` | Limit the commits to those made before the specified date                   |
+| `--author`            | Only show commits in which the author entry matches the specified string    |
+| `--committer`         | Only show commits in which the committer entry matches the specified string |
+| `--grep`              | Only show commits with a commit message containing the string               |
+| `-S`                  | Only show commits adding or removing code matching the string               |
