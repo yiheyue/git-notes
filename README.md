@@ -8,6 +8,8 @@ Notes for [Pro Git](https://git-scm.com/book/en/v2).
 
 - [Git Basics](./docs/doc01-git-basic.md)
 
+- [Git Branch](./docs/doc02-git-branch.md)
+
 ## VCS
 
 - VCS - Version Control System
